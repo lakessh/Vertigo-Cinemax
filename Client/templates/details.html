@@ -1,0 +1,61 @@
+<style>
+img {
+
+    height: 300px;
+    width : 400px;
+}
+</style>
+
+
+
+<center>
+ <img class="thumbnail" src="https://image.tmdb.org/t/p/w300/{{movie.poster_path}}" />
+
+</center>
+
+
+    <div>
+
+
+    <table>
+
+
+
+        <tr style="width:50px;"><h4>Title: {{movie.title}} </h4></tr>
+
+
+        <tr><p>Overview: {{ movie.overview }} </p></tr>
+
+
+        <tr><p>Release Date: {{ movie.release_date }}</p></tr>
+
+
+
+        <tr><p>Genre: {{  movie.original_language }} </p></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+        <tr><p>Status: {{ movie.status }}</p></tr>
+
+
+
+    </table>
+
+    </div>
+
+
+
+   <form method="post" href="hhttps://cinema-turbo7.c9users.io/movies/{{ id }}" style="text-align: right;">
+    <!--input type="hidden" name="id" value="{{ id }}" /-->
+    <input type="submit" name="like" ng-click="postLike(1)"  value="LIKE" />
+    <input type="submit" name="like" ng-click="postLike(-1)" value="DISLIKE" />
+    </form>
